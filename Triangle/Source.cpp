@@ -29,4 +29,18 @@ void render()
 	glEnd();
 
 	glutSwapBuffers();
+	glutKeyboardFunc(keyboard);
+}
+
+void keyboard(unsigned char key, int x, int y)
+{
+	if (key == 27)
+	{
+		exit(0);
+	}
+
+	if (key == 'f')
+	{
+		glutFullScreen();
+	}
 }
